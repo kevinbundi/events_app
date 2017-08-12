@@ -1,0 +1,49 @@
+div.errors_background{
+	background-image: url('4.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+ 	background-position: center;
+ 	background-repeat: no-repeat;
+ 	padding-left: 10px;
+ 	margin-left: -10px;
+}
+
+div.errors_events_image{
+	position: relative;
+	top: 12vh;
+}
+div.errors_events_image img{
+	max-width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
+div.page_errors{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 10%;
+}
+
+div.page_errors *{
+	color:white;
+	text-align: center;
+}
+div.page_errors h1{
+	font-size: 73px;
+	font-weight: 700;
+}
+div.page_errors p span#get_back_paragraph{
+	background-color: #090a27;
+}
+
+@media only screen and (max-width: 767px) {
+	div.errors_events_image{
+		top: 22%;
+	}
+
+	div.page_errors{
+		top:23%;
+		padding-bottom: 156px;
+	}
+}

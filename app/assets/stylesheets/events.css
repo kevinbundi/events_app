@@ -1,0 +1,134 @@
+
+div.your_state h4, .other_states h4, .your_events h4, .joined_events h4{
+	text-align: center;
+}
+
+div.your_state, .other_states{
+	height: 66vh;
+	overflow-y: auto;
+}
+
+/*div.comments{
+	height: 80%; 
+}*/
+
+div.comments .event_comments{
+	height: 57%;
+	overflow-y: auto;
+	border: 1px solid gray;
+	margin-bottom: 15px;
+}
+
+div.comments .event_comments p{
+	font-style: italic;
+}
+
+div.comments .event_comments span{
+	font-weight: bold;
+}
+
+div.add_event h3{
+	margin-top: 0px;
+}
+
+div.edit_event{
+	top: 6%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/*mobile phones*/
+@media only screen and (max-width: 480px){
+	div.your_state, .other_states{
+		height: 30vh;
+	}
+
+	div.add_event .form_group_location{
+		width: 72%;
+		display: inline-block;
+	}
+
+	div.add_event .form_group_state{
+		width: 26%;
+		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px){
+	div.your_state, .other_states{
+		height: 30vh;
+	}
+
+	div.form-group{
+		margin-bottom: 11px;
+	}
+
+	div.attendees_table, .comments{
+		height: 40vh;	
+	}
+	div.comments .event_comments{
+		height: 39%
+	}
+	div.comments .add_comment .add_comment_textarea{
+		height: 65px;
+		margin-bottom: 2px;
+	}
+	div.add_event .form_group_location{
+		width: 83%;
+		display: inline-block;
+	}
+	div.add_event .form_group_state{
+		width: 16%;
+		display: inline-block;
+	}
+}
+
+/*tablets*/
+@media only screen and (min-width: 768px){
+	div.your_state, .other_states, .your_events, .joined_events{
+		height: 27vh;
+	}
+	
+	div.my_nav-pill li {
+		position: absolute;
+		left: 10px;
+	}
+
+	div.add_event .my_event_form_control{
+		width: 170px;
+		font-size: 18px;
+	}
+	
+	div.add_event .form_control_state{
+		width: 80px;
+	}
+
+
+/*desktop*/
+@media only screen and (min-width: 992px) {
+	div.your_state, .other_states, .your_events, .joined_events, .attendees_table, .comments{
+		height: 61vh;
+	}
+
+	div.attendees_table, .comments{
+		height: 80vh;	
+	}
+	div.add_event .my_event_form_control{
+		width: 207px;
+		font-size: 19px;
+	}
+	div.add_event .form_control_state{
+		width: 80px;
+	}
+}
+
+/*large desktops*/
+@media only screen and (min-width: 1200px){
+	div.your_state, .other_states, .your_events, .joined_events, .attendees_table, .comments{
+		height: 65vh;
+	}
+
+	div.attendees_table, .comments{
+		height: 81vh;	
+	}
+}

@@ -1,0 +1,68 @@
+div.register{
+ 	top: 40%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
+
+div.registration_events_image img{
+	max-width: 100%;
+	height: auto;
+	border-radius: 16px;
+}
+
+div#errors_display{
+	border: 1px solid gray;
+}
+
+.registration-form-control{
+	display: block;
+	width: 100%;
+	padding: 6px 12px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+@media only screen and (max-width: 767px){
+	div.registration_events_image{
+		position: relative;
+		top: 5%;
+	}
+	div.register{
+	 	top: 37%;
+	 	left: 50%;
+	 	transform: translate(-50%, -50%);
+	}
+	.form-group{
+		margin-bottom: 10px;
+	}
+	.registration-btn{
+		margin-top:2px;
+	}
+	div.update{
+		margin-top: 5px;
+		padding-bottom: 400px;
+	}
+	div.edit_form-group{
+		margin-bottom: 20px;
+		margin-top: 5px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	div.registration_events_image{
+		position: relative;
+		top: 8%;
+	}
+	.form-group{
+		margin-bottom: 10px;
+	}
+}

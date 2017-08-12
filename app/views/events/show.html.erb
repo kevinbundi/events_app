@@ -1,0 +1,58 @@
+<h3 style="text-align: left; margin-left: 13px;"><%= @event.name %></h3>
+<div class="col-md-6 attendees_table">
+	<div>
+		<h4>Host : <%=@event.host%></h4>
+		<h4>Date : <%=@event.date%></h4>
+		<h4>Location : <%=@event.location%>, <%=@event.state%></h4>
+	</div>
+
+	<div>
+		<p>People attending this event - <span style="color:blue; font-size:16px;"><%=@user_attendings.count%></span></p>
+		<div class="table-responsive">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<th>Name</th>
+					<th>Location</th>
+					<th>State</th>
+				</thead>
+				<tbody>
+					<% @user_attendings.each do |ua| %>
+						<tr>
+							<td><%=ua.full_name%></td>
+							<td><%=ua.location%></td>
+							<td><%=ua.state%></td>
+						</tr>
+					<%end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="col-md-4 col-md-offset-1 comments">
+	<h4>Discussion about this event</h4>
+	<div class="col-md-12 event_comments">
+		<% @comments.each do |comment| %>
+			<p><span><%=User.find(comment.user_id).first_name%> says:</span> <%=comment.content%> 
+			<% if comment.user_id == current_user.id %>
+				<a href="/comments/<%=comment.id%>" data-method="delete"> - delete</a>
+			<%end%>
+			</p>
+			<p>--------------------</p>
+		<%end%>
+	</div>
+	<%if flash[:comment_errors]%>
+		<% flash[:comment_errors].each do |fe| %>
+			<p style="color:red"><%=fe%></p>
+		<%end%>
+	<%end%>
+	<div class="add_comment">
+		<form action="/comments/<%=@event_id%>" method="post">
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+			<div class="form-group">
+					<textarea name="content" class="form-control add_comment_textarea" rows="4"></textarea>
+			</div>
+			<input type="submit" value="add comment" class="btn btn-primary btn-block">
+		</form>
+	</div>
+</div>

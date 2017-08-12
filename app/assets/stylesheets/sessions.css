@@ -1,0 +1,55 @@
+div.container h3{
+	text-align: center;
+}
+
+div.login{
+ 	top: 40%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
+div.events_image img{
+		/*border: 1px solid gray;*/
+		max-width: 100%;
+		height: auto;
+		border-radius: 16px;
+	}
+
+
+/*mobile phones*/
+@media only screen and (max-width: 480px){
+	div.login{
+		top:42%;
+	}
+	div.events_image{
+		position: relative;
+		top: 17%;
+	}
+
+	.form-control{
+		height: 48px;
+		font-size: 19px;
+	}
+	.btn{
+		font-size:22px;
+	}
+}
+
+/*for tablets*/
+@media only screen and (min-width: 481px){
+	.form-control{
+		height: 48px;
+		font-size: 19px;
+	}
+	.btn{
+		font-size:22px;
+	}
+	div.events_image{
+		position: relative;
+		top: 17%;
+	}
+}
+
+
+
+
+
