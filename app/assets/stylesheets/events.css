@@ -67,7 +67,7 @@ div.edit_event{
 		height: 40vh;	
 	}
 	div.comments .event_comments{
-		height: 39%
+		height: 39%;
 	}
 	div.comments .add_comment .add_comment_textarea{
 		height: 65px;
@@ -102,7 +102,7 @@ div.edit_event{
 	div.add_event .form_control_state{
 		width: 80px;
 	}
-
+}
 
 /*desktop*/
 @media only screen and (min-width: 992px) {
